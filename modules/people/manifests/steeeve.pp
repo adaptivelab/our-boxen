@@ -12,7 +12,6 @@ class people::steeeve {
   include python
   include redis
   include java
-  include clojure
   include mongodb
   include sourcetree
   include heroku
@@ -20,8 +19,6 @@ class people::steeeve {
   include firefox
   include phantomjs
   include rdio
-  include vlc
-  include slate
 
   git::config::global {
     'user.name':
