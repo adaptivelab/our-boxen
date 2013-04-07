@@ -5,7 +5,7 @@ class people::steeeve {
   include virtualbox
   include vim
   include zsh
-  include iterm2::stable
+  include iterm2::dev
   include sublime_text_2
   include vagrant
   include xquartz
@@ -26,8 +26,6 @@ class people::steeeve {
     'user.email':
       value => 'steve@adaptivelab.co.uk';
   }
-
-  vim::bundle { 'altercation/vim-colors-solarized': }
 
   # My Bundles here:
   vim::bundle { 'kien/ctrlp.vim': }
@@ -59,11 +57,16 @@ class people::steeeve {
     source => 'https://gist.github.com/b6c5964fb9f602a4d1d5.git',
   }
 
-  # My dotfile repository
+  # My fonts
   repository { "${::boxen_srcdir}/fonts":
     source => 'https://github.com/eugeneching/consolas-powerline-vim.git',
   }
-# copy the fonts!
+  file { "/Users/${::luser}/.fonts":
+    source => "${::boxen_srcdir}/fonts",
+    mode => '0644',
+    recurse => true,
+  }
+  # then I need to copy the fonts!...
 
   file { "/Users/${::luser}/.zshrc":
     ensure => link,
@@ -88,14 +91,18 @@ class people::steeeve {
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/monokai-refined.vim",
-    require => Repository["${::boxen_srcdir}/dotfiles"],
+    require => [ Repository["${::boxen_srcdir}/dotfiles"], File["/Users/${::luser}/.vim/colors"]],
+  }
+
+  file { "/Users/${::luser}/Library/Application Support/Sublime Text 2/Packages/User/":
+    ensure => "directory",
   }
 
   file { "/Users/${::luser}/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/Preferences.sublime-settings",
-    require => Repository["${::boxen_srcdir}/dotfiles"],
+    require => [ Repository["${::boxen_srcdir}/dotfiles"], File["/Users/${::luser}/Library/Application Support/Sublime Text 2/Packages/User/"] ],
   }
 
   file { "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist":
