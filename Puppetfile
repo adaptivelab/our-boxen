@@ -36,6 +36,7 @@ github "sudo",     "1.0.0"
 
 # Everyone
 github "osx",      "1.0.0"
+github "java",     "1.0.6"
 github "xquartz",  "1.0.0"
 github "python",   "1.1.1"
 github "virtualbox","1.0.1"
