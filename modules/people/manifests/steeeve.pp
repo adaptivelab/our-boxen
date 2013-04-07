@@ -111,4 +111,11 @@ class people::steeeve {
     target => "${::boxen_srcdir}/dotfiles/com.googlecode.iterm2.plist",
     require => Repository["${::boxen_srcdir}/dotfiles"],
   }
+
+  file { "/Users/${::luser}/.oh-my-zsh":
+    ensure => link,
+    mode   => '0644',
+    target => "${::boxen_srcdir}/.oh-my-zsh",
+    require => Repository["${::boxen_srcdir}/.oh-my-zsh"],
+  }
 }
