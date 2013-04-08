@@ -56,11 +56,13 @@ node default {
   include nginx
   include nvm
 
+  include java
   include xquartz
   include python
   include virtualbox
   include vagrant
   include dropbox
+  include skype
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {

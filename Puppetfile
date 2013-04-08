@@ -44,9 +44,9 @@ github "vagrant",  "1.0.0"
 github "dropbox",  "1.1.0"
 github "heroku",   "2.0.0"
 github "skype",    "1.0.2"
-github "firefox",  "1.0.5"
 
 # People
+github "firefox",  "1.0.5"
 github "phantomjs","1.0.0"
 github "rdio",     "1.0.0"
 github "chrome",   "1.1.0"

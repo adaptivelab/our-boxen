@@ -1,21 +1,15 @@
 class people::steeeve {
 
-  include nvm
   include chrome
   include virtualbox
   include vim
   include zsh
   include iterm2::dev
   include sublime_text_2
-  include vagrant
-  include xquartz
-  include python
   include redis
-  include java
   include mongodb
   include sourcetree
   include heroku
-  include skype
   include firefox
   include phantomjs
   include rdio
