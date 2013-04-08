@@ -55,12 +55,19 @@ class people::steeeve {
   repository { "${::boxen_srcdir}/fonts":
     source => 'https://github.com/eugeneching/consolas-powerline-vim.git',
   }
+
+  file { "${::boxen_srcdir}/fonts/.git":
+    recurse => true,
+    ensure => "absent",
+    require => Repository["${::boxen_srcdir}/fonts"],
+  }
+
   file { "/Users/${::luser}/.fonts":
     source => "${::boxen_srcdir}/fonts",
     mode => '0644',
     recurse => true,
+    require => File["${::boxen_srcdir}/fonts/.git"],
   }
-  # then I need to copy the fonts!...
 
   file { "/Users/${::luser}/.zshrc":
     ensure => link,
