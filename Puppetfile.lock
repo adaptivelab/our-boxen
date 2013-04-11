@@ -34,6 +34,11 @@ GITHUBTARBALL
     git (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-harvest
+  specs:
+    harvest (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-heroku
   specs:
     heroku (2.0.0)
@@ -171,6 +176,7 @@ DEPENDENCIES
   firefox (= 1.0.5)
   gcc (= 1.0.0)
   git (= 1.0.0)
+  harvest (= 1.0.1)
   heroku (= 2.0.0)
   homebrew (= 1.1.2)
   hub (= 1.0.0)
