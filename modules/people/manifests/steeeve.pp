@@ -13,6 +13,8 @@ class people::steeeve {
   include firefox
   include phantomjs
   include rdio
+  include harvest
+  #  include spideroak
 
   git::config::global {
     'user.name':
@@ -49,24 +51,6 @@ class people::steeeve {
   # My dotfile repository
   repository { "${::boxen_srcdir}/dotfiles":
     source => 'https://gist.github.com/b6c5964fb9f602a4d1d5.git',
-  }
-
-  # My fonts
-  repository { "${::boxen_srcdir}/fonts":
-    source => 'https://github.com/eugeneching/consolas-powerline-vim.git',
-  }
-
-  file { "${::boxen_srcdir}/fonts/.git":
-    recurse => true,
-    ensure => "absent",
-    require => Repository["${::boxen_srcdir}/fonts"],
-  }
-
-  file { "/Users/${::luser}/.fonts":
-    source => "${::boxen_srcdir}/fonts",
-    mode => '0644',
-    recurse => true,
-    require => File["${::boxen_srcdir}/fonts/.git"],
   }
 
   file { "/Users/${::luser}/.zshrc":
