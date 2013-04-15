@@ -15,6 +15,12 @@ class people::steeeve {
   include rdio
   include harvest
   #  include spideroak
+  
+  package {
+    [
+      'cmus'
+    ]:
+  }
 
   git::config::global {
     'user.name':
@@ -29,6 +35,7 @@ class people::steeeve {
   vim::bundle { 'ervandew/supertab': }
   vim::bundle { 'tpope/vim-surround': }
   vim::bundle { 'scrooloose/nerdcommenter': }
+  vim::bundle { 'scrooloose/nerdtree': }
   vim::bundle { 'jeetsukumaran/vim-buffergator': }
   vim::bundle { 'tpope/vim-fugitive': }
   vim::bundle { 'kana/vim-fakeclip': }
