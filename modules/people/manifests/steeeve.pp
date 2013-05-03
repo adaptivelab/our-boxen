@@ -14,8 +14,7 @@ class people::steeeve {
   include phantomjs
   include rdio
   include harvest
-  #  include spideroak
-  
+
   package {
     [
       'cmus'
