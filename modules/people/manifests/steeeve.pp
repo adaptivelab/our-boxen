@@ -17,12 +17,15 @@ class people::steeeve {
 
   package {
     [
-      'cmus',
+      'memcached',
       'io',
       'scala',
       'erlang',
+      'gnu-prolog',
       'clojure',
-      'memcached'
+      'mutt',
+      'cmus',
+      'irssi'
     ]:
   }
 
