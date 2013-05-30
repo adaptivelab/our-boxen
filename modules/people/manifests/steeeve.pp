@@ -17,6 +17,7 @@ class people::steeeve {
 
   package {
     [
+      'autoenv',
       'memcached',
       'io',
       'scala',
