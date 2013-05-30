@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "boxen", "~> 1.0"
+gem "boxen", "~> 1.1"
 gem "open4", "~> 1.3"
 
 group :development do
@@ -8,3 +8,4 @@ group :development do
   gem "net-ssh"
   gem "rbvmomi"
 end
+
