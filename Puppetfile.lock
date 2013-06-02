@@ -164,11 +164,17 @@ GITHUBTARBALL
     stdlib (3.0.0)
 
 GITHUBTARBALL
+  remote: steeeve/puppet-arduino
+  specs:
+    arduino (1.0.1)
+
+GITHUBTARBALL
   remote: steeeve/puppet-sourcetree
   specs:
     sourcetree (0.0.2)
 
 DEPENDENCIES
+  arduino (= 1.0.1)
   boxen (= 1.2.0)
   chrome (= 1.1.0)
   dnsmasq (= 1.0.0)

@@ -14,6 +14,7 @@ class people::steeeve {
   include phantomjs
   include rdio
   include harvest
+  include arduino
 
   package {
     [
@@ -59,6 +60,8 @@ class people::steeeve {
   vim::bundle { 'hail2u/vim-css3-syntax': }
   vim::bundle { 'groenewege/vim-less': }
   vim::bundle { 'rodjek/vim-puppet': }
+  vim::bundle { 'tclem/vim-arduino': }
+  vim::bundle { 'sudar/vim-arduino-syntax': }
 
   # Oh my zsh
   repository { "${::boxen_srcdir}/.oh-my-zsh":
