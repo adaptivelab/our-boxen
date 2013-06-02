@@ -35,6 +35,8 @@ class people::steeeve {
       value => 'Steve Mckellar';
     'user.email':
       value => 'steve@adaptivelab.co.uk';
+    #'core.excludesfile':
+      #value => '/Users/${::luser}/.gitignore_global';
   }
 
   # My Bundles here:
@@ -72,6 +74,13 @@ class people::steeeve {
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/.zshrc",
+    require => Repository["${::boxen_srcdir}/dotfiles"],
+  }
+
+  file { "/Users/${::luser}/.gitignore_global":
+    ensure => link,
+    mode   => '0644',
+    target => "${::boxen_srcdir}/dotfiles/.gitignore_global",
     require => Repository["${::boxen_srcdir}/dotfiles"],
   }
 
