@@ -56,6 +56,7 @@ node default {
   include nginx
   include nvm
 
+  # Adaptive Lab modules
   include java
   include xquartz
   include python
@@ -63,6 +64,9 @@ node default {
   include vagrant
   include dropbox
   include skype
+  include chrome
+  include firefox
+  include heroku
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {

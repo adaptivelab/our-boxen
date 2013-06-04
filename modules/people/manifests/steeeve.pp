@@ -1,7 +1,5 @@
 class people::steeeve {
 
-  include chrome
-  include virtualbox
   include vim
   include zsh
   include iterm2::dev
@@ -10,7 +8,6 @@ class people::steeeve {
   include mongodb
   include sourcetree
   include heroku
-  include firefox
   include phantomjs
   include rdio
   include harvest
