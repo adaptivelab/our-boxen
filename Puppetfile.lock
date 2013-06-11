@@ -34,6 +34,11 @@ GITHUBTARBALL
     git (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-graphviz
+  specs:
+    graphviz (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-harvest
   specs:
     harvest (1.0.1)
@@ -89,9 +94,19 @@ GITHUBTARBALL
     osx (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-pcre
+  specs:
+    pcre (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-pkgconfig
+  specs:
+    pkgconfig (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-python
@@ -127,6 +142,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-swig
+  specs:
+    swig (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-vagrant
@@ -182,6 +202,7 @@ DEPENDENCIES
   firefox (= 1.0.5)
   gcc (= 1.0.0)
   git (= 1.0.0)
+  graphviz (= 1.0.0)
   harvest (= 1.0.1)
   heroku (= 2.0.0)
   homebrew (= 1.1.2)
@@ -194,7 +215,9 @@ DEPENDENCIES
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
   osx (= 1.0.0)
+  pcre (= 1.0.0)
   phantomjs (= 1.0.0)
+  pkgconfig (= 1.0.0)
   python (= 1.1.1)
   rdio (= 1.0.0)
   redis (= 1.0.0)
@@ -204,6 +227,7 @@ DEPENDENCIES
   stdlib (= 3.0.0)
   sublime_text_2 (= 1.1.0)
   sudo (= 1.0.0)
+  swig (= 1.0.0)
   vagrant (= 1.0.0)
   vim (= 1.0.2)
   virtualbox (= 1.0.1)

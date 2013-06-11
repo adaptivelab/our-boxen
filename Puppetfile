@@ -59,3 +59,8 @@ github "mongodb",  "1.0.0"
 github "harvest",  "1.0.1"
 github "sourcetree", "0.0.2", :repo => "steeeve/puppet-sourcetree"
 github "arduino", "1.0.1", :repo => "steeeve/puppet-arduino"
+
+github "pcre",	"1.0.0"
+github "pkgconfig",	"1.0.0"
+github "swig",	"1.0.0"
+github "graphviz",	"1.0.0"
