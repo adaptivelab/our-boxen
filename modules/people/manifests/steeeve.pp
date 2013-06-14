@@ -15,6 +15,7 @@ class people::steeeve {
 
   package {
     [
+      'neo4j',
       'autoenv',
       'memcached',
       'io',
