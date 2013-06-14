@@ -40,13 +40,6 @@ class people::steeeve {
       #value => '/Users/${::luser}/.gitignore_global';
   }
 
-  # VIM
-
-  file { "${vim::vimrc}":
-    target => "${::boxen_srcdir}/dotfiles/.vimrc",
-    require => Repository["${::boxen_srcdir}/dotfiles"],
-  }
-
   # Bundles here:
   vim::bundle { 'kien/ctrlp.vim': }
   vim::bundle { 'scrooloose/syntastic': }
@@ -70,12 +63,18 @@ class people::steeeve {
   vim::bundle { 'tclem/vim-arduino': }
   vim::bundle { 'sudar/vim-arduino-syntax': }
 
+  # VIM
+  file { "/Users/${::luser}/.vimrc":
+    target => "${::boxen_srcdir}/dotfiles/.vimrc",
+    require => Repository["${::boxen_srcdir}/dotfiles"],
+  }
+
   # My dotfile repository
   repository { "${::boxen_srcdir}/dotfiles":
     source => 'https://gist.github.com/b6c5964fb9f602a4d1d5.git',
   }
 
-  file { "/Users/${::luser}/.zshrc":
+  file { "/users/${::luser}/.zshrc":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/.zshrc",
