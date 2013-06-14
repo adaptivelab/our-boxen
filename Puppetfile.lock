@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: adaptivelab/puppet-btsync
+  specs:
+    btsync (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (1.2.0)
@@ -196,6 +201,7 @@ GITHUBTARBALL
 DEPENDENCIES
   arduino (= 1.0.1)
   boxen (= 1.2.0)
+  btsync (= 1.0.0)
   chrome (= 1.1.0)
   dnsmasq (= 1.0.0)
   dropbox (= 1.1.0)

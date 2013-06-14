@@ -44,6 +44,7 @@ github "vagrant",  "1.0.0"
 github "dropbox",  "1.1.0"
 github "heroku",   "2.0.0"
 github "skype",    "1.0.2"
+github "btsync",   "1.0.0", :repo => "adaptivelab/puppet-btsync"
 
 # People
 github "firefox",  "1.0.5"

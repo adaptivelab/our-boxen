@@ -67,6 +67,7 @@ node default {
   include chrome
   include firefox
   include heroku
+  include btsync
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
