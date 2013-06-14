@@ -29,6 +29,8 @@ class people::steeeve {
     ]:
   }
 
+  # Git config
+
   git::config::global {
     'user.name':
       value => 'Steve Mckellar';
@@ -38,7 +40,14 @@ class people::steeeve {
       #value => '/Users/${::luser}/.gitignore_global';
   }
 
-  # My Bundles here:
+  # VIM
+
+  file { "${vim::vimrc}":
+    target => "${::boxen_srcdir}/dotfiles/.vimrc",
+    require => Repository["${::boxen_srcdir}/dotfiles"],
+  }
+
+  # Bundles here:
   vim::bundle { 'kien/ctrlp.vim': }
   vim::bundle { 'scrooloose/syntastic': }
   vim::bundle { 'ervandew/supertab': }
@@ -61,11 +70,6 @@ class people::steeeve {
   vim::bundle { 'tclem/vim-arduino': }
   vim::bundle { 'sudar/vim-arduino-syntax': }
 
-  # Oh my zsh
-  repository { "${::boxen_srcdir}/.oh-my-zsh":
-    source => 'https://github.com/robbyrussell/oh-my-zsh.git',
-  }
-
   # My dotfile repository
   repository { "${::boxen_srcdir}/dotfiles":
     source => 'https://gist.github.com/b6c5964fb9f602a4d1d5.git',
@@ -82,13 +86,6 @@ class people::steeeve {
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/.gitignore_global",
-    require => Repository["${::boxen_srcdir}/dotfiles"],
-  }
-
-  file { "/Users/${::luser}/.vimrc":
-    ensure => link,
-    mode   => '0644',
-    target => "${::boxen_srcdir}/dotfiles/.vimrc",
     require => Repository["${::boxen_srcdir}/dotfiles"],
   }
 
@@ -120,6 +117,11 @@ class people::steeeve {
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/com.googlecode.iterm2.plist",
     require => Repository["${::boxen_srcdir}/dotfiles"],
+  }
+
+  # Oh my zsh
+  repository { "${::boxen_srcdir}/.oh-my-zsh":
+    source => 'https://github.com/robbyrussell/oh-my-zsh.git',
   }
 
   file { "/Users/${::luser}/.oh-my-zsh":
