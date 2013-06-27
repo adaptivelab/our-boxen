@@ -64,6 +64,11 @@ GITHUBTARBALL
     hub (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-induction
+  specs:
+    induction (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-iterm2
   specs:
     iterm2 (1.0.2)
@@ -77,6 +82,11 @@ GITHUBTARBALL
   remote: boxen/puppet-mongodb
   specs:
     mongodb (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mou
+  specs:
+    mou (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -134,9 +144,19 @@ GITHUBTARBALL
     ruby (3.1.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-shiftit
+  specs:
+    shiftit (0.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-skype
   specs:
     skype (1.0.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-slate
+  specs:
+    slate (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-sublime_text_2
@@ -156,7 +176,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
-    vagrant (1.0.0)
+    vagrant (2.0.7)
 
 GITHUBTARBALL
   remote: boxen/puppet-vim
@@ -213,10 +233,12 @@ DEPENDENCIES
   heroku (= 2.0.0)
   homebrew (= 1.1.2)
   hub (= 1.0.0)
+  induction (= 1.0.0)
   inifile (= 0.9.0)
   iterm2 (= 1.0.2)
   java (= 1.0.6)
   mongodb (= 1.0.0)
+  mou (= 1.0.0)
   nginx (= 1.1.0)
   nodejs (= 1.0.0)
   nvm (= 1.0.0)
@@ -228,13 +250,15 @@ DEPENDENCIES
   rdio (= 1.0.0)
   redis (= 1.0.0)
   ruby (= 3.1.0)
+  shiftit (= 0.0.2)
   skype (= 1.0.2)
+  slate (= 1.0.0)
   sourcetree (= 0.0.2)
   stdlib (= 3.0.0)
   sublime_text_2 (= 1.1.0)
   sudo (= 1.0.0)
   swig (= 1.0.0)
-  vagrant (= 1.0.0)
+  vagrant (= 2.0.7)
   vim (= 1.0.2)
   virtualbox (= 1.0.1)
   xquartz (= 1.0.0)
