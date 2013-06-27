@@ -12,6 +12,10 @@ class people::steeeve {
   include rdio
   include harvest
   include arduino
+  include shiftit
+  include slate
+  include induction
+  include mou
 
   package {
     [
