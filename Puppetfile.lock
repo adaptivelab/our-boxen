@@ -124,6 +124,11 @@ GITHUBTARBALL
     pkgconfig (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-postgresql
+  specs:
+    postgresql (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-python
   specs:
     python (1.1.1)
@@ -172,6 +177,11 @@ GITHUBTARBALL
   remote: boxen/puppet-swig
   specs:
     swig (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-sysctl
+  specs:
+    sysctl (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-vagrant
@@ -246,6 +256,7 @@ DEPENDENCIES
   pcre (= 1.0.0)
   phantomjs (= 1.0.0)
   pkgconfig (= 1.0.0)
+  postgresql (= 1.0.2)
   python (= 1.1.1)
   rdio (= 1.0.0)
   redis (= 1.0.0)
@@ -258,6 +269,7 @@ DEPENDENCIES
   sublime_text_2 (= 1.1.0)
   sudo (= 1.0.0)
   swig (= 1.0.0)
+  sysctl (= 1.0.0)
   vagrant (= 2.0.7)
   vim (= 1.0.2)
   virtualbox (= 1.0.1)

@@ -6,6 +6,8 @@ class people::steeeve {
   include sublime_text_2
   include redis
   include mongodb
+  include sysctl
+  include postgresql
   include sourcetree
   include heroku
   include phantomjs
