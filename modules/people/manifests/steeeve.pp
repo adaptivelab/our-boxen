@@ -18,6 +18,8 @@ class people::steeeve {
   include slate
   include induction
   include mou
+  include kindle
+  include macvim
 
   package {
     [
