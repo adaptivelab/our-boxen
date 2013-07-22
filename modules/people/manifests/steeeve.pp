@@ -33,7 +33,8 @@ class people::steeeve {
       'clojure',
       'mutt',
       'cmus',
-      'irssi'
+      'irssi',
+      'imagesnap'
     ]:
   }
 
