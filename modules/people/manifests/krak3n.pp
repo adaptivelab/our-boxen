@@ -133,4 +133,15 @@ class people::krak3n {
     provider => 'gem',
   }
 
+  #
+  # Tmux
+  #
+
+  file { "/Users/${::luser}/.tmux.conf":
+    ensure => link,
+    mode => '0644',
+    target => "$salt/states/chris_tmux/files/.tmux.conf",
+    require => Repository[$salt],
+  }
+
 }
