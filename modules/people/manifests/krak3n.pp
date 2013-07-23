@@ -92,6 +92,17 @@ class people::krak3n {
     provider => 'pip',
   }
 
+  file { "/Users/${::luser}/.autoenv":
+    ensure => directory,
+    mode => 0644,
+  }
+
+  file { "/Users/${::luser}/.autoenv/activate.sh":
+    ensure => link,
+    target => '/opt/boxen/homebrew/Cellar/python/2.7.3-boxen2/share/python/activate.sh',
+    require => File["/Users/${::luser}/.autoenv"]
+  }
+
   #
   # ZSH Configuration
   #
