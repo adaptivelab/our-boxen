@@ -39,7 +39,10 @@ Repository {
   extra    => [
     '--recurse-submodules'
   ],
-  require  => Class['git']
+  require  => File["${boxen::config::bindir}/boxen-git-credential"],
+  config   => {
+    'credential.helper' => "${boxen::config::bindir}/boxen-git-credential"
+  }
 }
 
 Service {
@@ -54,7 +57,6 @@ node default {
   include git
   include hub
   include nginx
-  include nvm
 
   # Adaptive Lab modules
   include java
@@ -74,10 +76,12 @@ node default {
     fail('Please enable full disk encryption and try again')
   }
 
+
   # node versions
-  include nodejs::0-4
-  include nodejs::0-6
-  include nodejs::0-8
+  include nodejs::v0_4
+  include nodejs::v0_6
+  include nodejs::v0_8
+  include nodejs::v0_10
 
   # default ruby versions
   include ruby::1_8_7
