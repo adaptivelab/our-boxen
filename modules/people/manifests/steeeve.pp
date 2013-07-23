@@ -10,8 +10,8 @@ class people::steeeve {
   include postgresql
   include sourcetree
   include heroku
-  include phantomjs
   include rdio
+  include phantomjs::1_9_0
   include harvest
   include arduino
   include shiftit
@@ -31,9 +31,7 @@ class people::steeeve {
       'erlang',
       'gnu-prolog',
       'clojure',
-      'mutt',
       'cmus',
-      'irssi',
       'imagesnap'
     ]:
   }
