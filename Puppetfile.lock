@@ -4,6 +4,16 @@ GITHUBTARBALL
     btsync (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-adium
+  specs:
+    adium (1.1.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-alfred
+  specs:
+    alfred (1.1.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-autoconf
   specs:
     autoconf (1.0.0)
@@ -229,6 +239,11 @@ GITHUBTARBALL
     virtualbox (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-vlc
+  specs:
+    vlc (1.0.3)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.0)
@@ -259,6 +274,8 @@ GITHUBTARBALL
     sourcetree (0.0.2)
 
 DEPENDENCIES
+  adium (= 1.1.1)
+  alfred (= 1.1.2)
   arduino (= 1.0.1)
   autoconf (= 1.0.0)
   boxen (= 3.0.0)
@@ -309,6 +326,7 @@ DEPENDENCIES
   vagrant (= 2.0.9)
   vim (= 1.0.5)
   virtualbox (= 1.0.1)
+  vlc (= 1.0.3)
   xquartz (= 1.1.0)
   zsh (= 1.0.0)
 
