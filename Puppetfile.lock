@@ -194,6 +194,11 @@ GITHUBTARBALL
     slate (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sourcetree
+  specs:
+    sourcetree (0.0.4)
+
+GITHUBTARBALL
   remote: boxen/puppet-spotify
   specs:
     spotify (1.0.1)
@@ -268,11 +273,6 @@ GITHUBTARBALL
   specs:
     arduino (1.0.1)
 
-GITHUBTARBALL
-  remote: steeeve/puppet-sourcetree
-  specs:
-    sourcetree (0.0.2)
-
 DEPENDENCIES
   adium (= 1.1.1)
   alfred (= 1.1.2)
@@ -315,7 +315,7 @@ DEPENDENCIES
   shiftit (= 0.0.2)
   skype (= 1.0.2)
   slate (= 1.0.0)
-  sourcetree (= 0.0.2)
+  sourcetree (= 0.0.4)
   spotify (= 1.0.1)
   stdlib (= 4.1.0)
   sublime_text_2 (= 1.1.2)
