@@ -20,6 +20,7 @@ class people::steeeve {
   include mou
   include kindle
   include macvim
+  include chrome::canary
 
   package {
     [
