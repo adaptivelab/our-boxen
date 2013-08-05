@@ -70,6 +70,8 @@ class people::steeeve {
   vim::bundle { 'rodjek/vim-puppet': }
   vim::bundle { 'tclem/vim-arduino': }
   vim::bundle { 'sudar/vim-arduino-syntax': }
+  vim::bundle { 'saltstack/salt-vim': }
+  vim::bundle { 'markcornick/vim-vagrant': }
 
   # VIM
   file { "/Users/${::luser}/.vimrc":
