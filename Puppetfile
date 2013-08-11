@@ -47,6 +47,7 @@ github "dropbox",           "1.1.0"
 github "heroku",            "2.0.0"
 github "skype",             "1.0.2"
 github "btsync",            "1.0.0", :repo => "adaptivelab/puppet-btsync"
+github "git-flow",          "0.2.0", :repo => "adaptivelab/puppet-git-flow"
 
 # People
 github "firefox",           "1.0.5"

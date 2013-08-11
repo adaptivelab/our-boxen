@@ -4,6 +4,11 @@ GITHUBTARBALL
     btsync (1.0.0)
 
 GITHUBTARBALL
+  remote: adaptivelab/puppet-git-flow
+  specs:
+    git-flow (0.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-adium
   specs:
     adium (1.1.1)
@@ -286,6 +291,7 @@ DEPENDENCIES
   firefox (= 1.0.5)
   gcc (= 2.0.1)
   git (= 1.2.5)
+  git-flow (= 0.2.0)
   graphviz (= 1.0.0)
   harvest (= 1.0.1)
   heroku (= 2.0.0)
