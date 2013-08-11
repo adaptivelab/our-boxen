@@ -7,4 +7,9 @@ class benjackson::sublime-preferences {
     require => Class["sublime_text_2"]
   }
 
+  repository { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/Theme - Aqua":
+    source => "mrappleton/aqua-theme",
+    provider => "git"
+  }
+
 }
