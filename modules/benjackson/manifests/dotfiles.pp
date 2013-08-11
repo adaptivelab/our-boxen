@@ -2,15 +2,24 @@ class benjackson::dotfiles {
 
   repository {
     "${::boxen_srcdir}/dotfiles":
-      source   => "benjackson/dotfiles", #short hand for github repos
-      provider => "git";
+      source    => "benjackson/dotfiles", #short hand for github repos
+      provider  => "git";
+  }
+
+  exec { "update dotfiles":
+    command     => "git pull",
+    path        => ["/bin", "/usr/bin", "/usr/local/bin"],
+    cwd         => "${::boxen_srcdir}/dotfiles",
+    user        => $::boxen_user,
+    require     => Repository["${::boxen_srcdir}/dotfiles"],
+    before      => Git::Config::Global["user.name", "user.email"]
   }
 
   exec { "sh ${::boxen_srcdir}/dotfiles/bootstrap.sh --force":
-    user        => "benjackson",
+    user        => $::boxen_user,
     path        => ["/bin", "/usr/bin", "/usr/local/bin"],
-    subscribe   => Repository["${::boxen_srcdir}/dotfiles"],
-    refreshonly => true
+    require     => Exec["update dotfiles"],
+    before      => Git::Config::Global["core.excludesfile"]
   }
 
 }
