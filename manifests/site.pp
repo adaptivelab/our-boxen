@@ -52,30 +52,19 @@ Service {
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
+  # The base Adaptive Lab apps and settings
+  include adaptive_lab::environment
+
   # core modules, needed for most things
   include dnsmasq
   include git
   include hub
   include nginx
 
-  # Adaptive Lab modules
-  include java
-  include xquartz
-  include python
-  include virtualbox
-  include vagrant
-  include dropbox
-  include skype
-  include chrome
-  include firefox
-  include heroku
-  include btsync
-
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
   }
-
 
   # node versions
   include nodejs::v0_4
@@ -94,8 +83,7 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar',
-      'git-flow'
+      'gnu-tar'
     ]:
   }
 
