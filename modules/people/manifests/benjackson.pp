@@ -10,5 +10,6 @@ class people::benjackson {
   include benjackson::git-config
   include benjackson::dotfiles
   include benjackson::sublime-preferences
+  include benjackson::iterm2-preferences
 
 }
