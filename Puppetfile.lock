@@ -4,6 +4,16 @@ GITHUBTARBALL
     btsync (1.0.0)
 
 GITHUBTARBALL
+  remote: adaptivelab/puppet-font
+  specs:
+    font (1.0.3)
+
+GITHUBTARBALL
+  remote: adaptivelab/puppet-git-flow
+  specs:
+    git-flow (0.2.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-adium
   specs:
     adium (1.1.1)
@@ -17,6 +27,11 @@ GITHUBTARBALL
   remote: boxen/puppet-autoconf
   specs:
     autoconf (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-bash
+  specs:
+    bash (1.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-boxen
@@ -86,12 +101,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-iterm2
   specs:
-    iterm2 (1.0.2)
+    iterm2 (1.0.3)
 
 GITHUBTARBALL
   remote: boxen/puppet-java
   specs:
-    java (1.0.6)
+    java (1.1.2)
 
 GITHUBTARBALL
   remote: boxen/puppet-kindle
@@ -278,14 +293,17 @@ DEPENDENCIES
   alfred (= 1.1.2)
   arduino (= 1.0.1)
   autoconf (= 1.0.0)
+  bash (= 1.1.0)
   boxen (= 3.0.0)
   btsync (= 1.0.0)
   chrome (= 1.1.1)
   dnsmasq (= 1.0.0)
   dropbox (= 1.1.0)
   firefox (= 1.0.5)
+  font (= 1.0.3)
   gcc (= 2.0.1)
   git (= 1.2.5)
+  git-flow (= 0.2.0)
   graphviz (= 1.0.0)
   harvest (= 1.0.1)
   heroku (= 2.0.0)
@@ -293,8 +311,8 @@ DEPENDENCIES
   hub (= 1.0.0)
   induction (= 1.0.0)
   inifile (= 1.0.0)
-  iterm2 (= 1.0.2)
-  java (= 1.0.6)
+  iterm2 (= 1.0.3)
+  java (= 1.1.2)
   kindle (= 1.0.1)
   macvim (= 1.0.0)
   mongodb (= 1.0.0)
