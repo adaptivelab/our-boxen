@@ -59,6 +59,7 @@ class people::steeeve {
   vim::bundle { 'tpope/vim-fugitive': }
   vim::bundle { 'kana/vim-fakeclip': }
   # Language bits
+  vim::bundle { 'vim-ruby/vim-ruby': }
   vim::bundle { 'tpope/vim-rails': }
   vim::bundle { 'tpope/vim-haml': }
   vim::bundle { 'tpope/vim-cucumber': }
