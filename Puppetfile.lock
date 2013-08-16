@@ -84,6 +84,11 @@ GITHUBTARBALL
     heroku (2.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-hipchat
+  specs:
+    hipchat (1.0.7)
+
+GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.2.1)
@@ -307,6 +312,7 @@ DEPENDENCIES
   graphviz (= 1.0.0)
   harvest (= 1.0.1)
   heroku (= 2.0.0)
+  hipchat (= 1.0.7)
   homebrew (= 1.2.1)
   hub (= 1.0.0)
   induction (= 1.0.0)
