@@ -14,6 +14,11 @@ GITHUBTARBALL
     git-flow (0.2.0)
 
 GITHUBTARBALL
+  remote: adaptivelab/puppet-hipchat
+  specs:
+    hipchat (1.0.8)
+
+GITHUBTARBALL
   remote: boxen/puppet-adium
   specs:
     adium (1.1.1)
@@ -82,11 +87,6 @@ GITHUBTARBALL
   remote: boxen/puppet-heroku
   specs:
     heroku (2.0.0)
-
-GITHUBTARBALL
-  remote: boxen/puppet-hipchat
-  specs:
-    hipchat (1.0.7)
 
 GITHUBTARBALL
   remote: boxen/puppet-homebrew
@@ -312,7 +312,7 @@ DEPENDENCIES
   graphviz (= 1.0.0)
   harvest (= 1.0.1)
   heroku (= 2.0.0)
-  hipchat (= 1.0.7)
+  hipchat (= 1.0.8)
   homebrew (= 1.2.1)
   hub (= 1.0.0)
   induction (= 1.0.0)
