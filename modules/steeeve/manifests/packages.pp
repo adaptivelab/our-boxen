@@ -10,7 +10,9 @@ class steeeve::packages {
       'gnu-prolog',
       'clojure',
       'cmus',
-      'imagesnap'
+      'imagesnap',
+      'imagemagick'
     ]:
   }
+
 }

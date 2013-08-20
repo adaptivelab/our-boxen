@@ -1,6 +1,5 @@
 class people::steeeve {
 
-  include vim
   include zsh
   include iterm2::dev
   include sublime_text_2
@@ -26,5 +25,5 @@ class people::steeeve {
   include steeeve::fonts
   include steeeve::oh-my-zsh
   include steeeve::git-config
-  include steeeve::vim-config
+  include steeeve::vim
 }
