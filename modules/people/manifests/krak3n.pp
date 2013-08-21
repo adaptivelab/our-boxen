@@ -22,6 +22,14 @@ class people::krak3n {
     extra => [],
   }
 
+  # Fetch latest
+  exec { "update_salt_repo":
+    command => "git pull origin master",
+    cwd => $salt,
+    user => "${::luser}",
+    require => Repository[$salt],
+  }
+
   # Update Submodules in ~/.salt
   exec { "update_salt_submodules":
     command => "git submodule update --init --recursive",
@@ -79,7 +87,7 @@ class people::krak3n {
   file { "/Users/${::luser}/.vimrc":
     ensure => link,
     mode => '0644',
-    target => "$salt/states/chris_vim/files/.vimrc",
+    target => "$salt/states/local_vim/files/.vimrc",
     require => Repository[$salt],
   }
 
@@ -111,7 +119,7 @@ class people::krak3n {
   file { "/Users/${::luser}/.zshrc":
     ensure => link,
     mode => '0644',
-    target => "$salt/states/chris_zsh/files/.zshrc",
+    target => "$salt/states/local_zsh/files/.zshrc",
     require => Repository[$salt],
   }
 
@@ -124,7 +132,7 @@ class people::krak3n {
   file { "/Users/${::luser}/.oh-my-zsh/themes/chris.zsh-theme":
     ensure => link,
     mode => '0644',
-    target => "$salt/states/chris_zsh/files/chris.zsh-theme",
+    target => "$salt/states/local_zsh/files/chris.zsh-theme",
     require => [Repository[$salt], Repository["/Users/${::luser}/.oh-my-zsh"]],
   }
 
@@ -135,7 +143,7 @@ class people::krak3n {
   file { "/Users/${::luser}/.gitconfig":
     ensure => link,
     mode => '0644',
-    target => "$salt/states/chris_git/files/.gitconfig",
+    target => "$salt/states/local_git/files/.gitconfig",
     require => Repository[$salt],
   }
 
@@ -151,7 +159,7 @@ class people::krak3n {
   file { "/Users/${::luser}/.tmux.conf":
     ensure => link,
     mode => '0644',
-    target => "$salt/states/chris_tmux/files/.tmux.conf",
+    target => "$salt/states/local_tmux/files/.tmux.conf",
     require => Repository[$salt],
   }
 
