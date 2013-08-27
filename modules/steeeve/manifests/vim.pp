@@ -11,9 +11,10 @@ class steeeve::vim {
   vim::bundle { 'scrooloose/nerdtree': }
   vim::bundle { 'jeetsukumaran/vim-buffergator': }
   vim::bundle { 'tpope/vim-fugitive': }
-  vim::bundle { 'kana/vim-fakeclip': }
+  #vim::bundle { 'kana/vim-fakeclip': }
   #vim::bundle { 'Lokaltog/powerline': }
   vim::bundle { 'bling/vim-airline': }
+  vim::bundle { 'editorconfig/editorconfig-vim': }
 
   # Language bits
   vim::bundle { 'vim-ruby/vim-ruby': }
