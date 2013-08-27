@@ -15,4 +15,6 @@ class adaptive_lab::environment {
   include btsync
   include git-flow
 
+  include adaptive_lab::nodejs_packages
+
 }
