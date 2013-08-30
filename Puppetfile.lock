@@ -44,6 +44,11 @@ GITHUBTARBALL
     boxen (3.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-caffeine
+  specs:
+    caffeine (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-chrome
   specs:
     chrome (1.1.1)
@@ -62,6 +67,11 @@ GITHUBTARBALL
   remote: boxen/puppet-firefox
   specs:
     firefox (1.0.5)
+
+GITHUBTARBALL
+  remote: boxen/puppet-foreman
+  specs:
+    foreman (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -144,9 +154,19 @@ GITHUBTARBALL
     nodejs (3.2.9)
 
 GITHUBTARBALL
+  remote: boxen/puppet-onepassword
+  specs:
+    onepassword (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-openssl
   specs:
     openssl (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-opera
+  specs:
+    opera (0.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-osx
@@ -217,6 +237,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sourcetree
   specs:
     sourcetree (0.0.4)
+
+GITHUBTARBALL
+  remote: boxen/puppet-spectacle
+  specs:
+    spectacle (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-spotify
@@ -301,11 +326,13 @@ DEPENDENCIES
   bash (= 1.1.0)
   boxen (= 3.0.0)
   btsync (= 1.0.0)
+  caffeine (= 1.0.0)
   chrome (= 1.1.1)
   dnsmasq (= 1.0.0)
   dropbox (= 1.1.0)
   firefox (= 1.0.5)
   font (= 1.0.3)
+  foreman (= 1.0.0)
   gcc (= 2.0.1)
   git (= 1.2.5)
   git-flow (= 0.2.0)
@@ -325,7 +352,9 @@ DEPENDENCIES
   mou (= 1.0.0)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
+  onepassword (= 1.0.2)
   openssl (= 1.0.0)
+  opera (= 0.2.0)
   osx (= 1.0.0)
   pcre (= 1.0.0)
   phantomjs (= 2.0.2)
@@ -340,6 +369,7 @@ DEPENDENCIES
   skype (= 1.0.2)
   slate (= 1.0.0)
   sourcetree (= 0.0.4)
+  spectacle (= 1.0.0)
   spotify (= 1.0.1)
   stdlib (= 4.1.0)
   sublime_text_2 (= 1.1.2)
