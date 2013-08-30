@@ -23,6 +23,7 @@ class steeeve::vim {
   vim::bundle { 'tpope/vim-cucumber': }
   vim::bundle { 'taq/vim-rspec': }
   vim::bundle { 'pangloss/vim-javascript': }
+  vim::bundle { 'kchmck/vim-coffee-script': }
   vim::bundle { 'digitaltoad/vim-jade': }
   vim::bundle { 'hail2u/vim-css3-syntax': }
   vim::bundle { 'groenewege/vim-less': }
