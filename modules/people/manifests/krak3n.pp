@@ -14,6 +14,9 @@ class people::krak3n {
   # Entertainment
   include spotify
 
+  # Install ruby 1.9.3
+  require ruby::1_9_3_p194
+
   $salt = "/Users/${::luser}/.salt"
 
   # My salt repo - where my dot files and other things live
