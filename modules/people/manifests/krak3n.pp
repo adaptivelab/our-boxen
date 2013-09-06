@@ -183,12 +183,12 @@ class people::krak3n {
   }
 
   ruby::gem { "hub":
-    gem     => 'gitup',
+    gem     => 'hub',
     ruby    => '1.9.3'
   }
 
   ruby::gem { "tmuxinator":
-    gem     => 'gitup',
+    gem     => 'tmuxinator',
     ruby    => '1.9.3'
   }
 
