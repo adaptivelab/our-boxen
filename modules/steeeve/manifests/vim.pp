@@ -14,12 +14,14 @@ class steeeve::vim {
   #vim::bundle { 'kana/vim-fakeclip': }
   #vim::bundle { 'Lokaltog/powerline': }
   vim::bundle { 'bling/vim-airline': }
+  vim::bundle { 'FredKSchott/CoVim': }
   vim::bundle { 'editorconfig/editorconfig-vim': }
 
   # Language bits
   vim::bundle { 'vim-ruby/vim-ruby': }
   vim::bundle { 'tpope/vim-rails': }
   vim::bundle { 'tpope/vim-haml': }
+  vim::bundle { 'nono/vim-handlebars': }
   vim::bundle { 'tpope/vim-cucumber': }
   vim::bundle { 'taq/vim-rspec': }
   vim::bundle { 'pangloss/vim-javascript': }
