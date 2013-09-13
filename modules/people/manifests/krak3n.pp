@@ -1,5 +1,10 @@
 class people::krak3n {
 
+  # Software
+  include java
+  include ruby
+  include ruby::1_9_3_p448
+
   # Development
   include vim
   include zsh
@@ -13,6 +18,11 @@ class people::krak3n {
 
   # Entertainment
   include spotify
+
+  # Install ruby 1.9.3
+  class { 'ruby::global':
+      version => '1.9.3'
+  }
 
   $salt = "/Users/${::luser}/.salt"
 
@@ -161,6 +171,25 @@ class people::krak3n {
     mode => '0644',
     target => "$salt/states/local_tmux/files/.tmux.conf",
     require => Repository[$salt],
+  }
+
+  #
+  # Gems
+  #
+
+  ruby::gem { "gitup":
+    gem     => 'gitup',
+    ruby    => '1.9.3'
+  }
+
+  ruby::gem { "hub":
+    gem     => 'hub',
+    ruby    => '1.9.3'
+  }
+
+  ruby::gem { "tmuxinator":
+    gem     => 'tmuxinator',
+    ruby    => '1.9.3'
   }
 
 }
