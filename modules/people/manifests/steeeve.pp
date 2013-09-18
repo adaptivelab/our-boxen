@@ -2,7 +2,6 @@ class people::steeeve {
 
   include zsh
   include iterm2::dev
-  include sublime_text_2
   include redis
   include mongodb
   include sysctl
@@ -15,7 +14,6 @@ class people::steeeve {
   include arduino
   include shiftit
   include slate
-  include induction
   include mou
   include kindle
   include macvim
