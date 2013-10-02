@@ -8,7 +8,6 @@ class people::steeeve {
   include postgresql
   include sourcetree
   include heroku
-  include rdio
   include phantomjs::1_9_0
   include harvest
   include arduino
@@ -16,7 +15,7 @@ class people::steeeve {
   include slate
   include mou
   include kindle
-  include macvim
+  include spotify
   include chrome::canary
   include steeeve::packages
   include steeeve::dotfiles
