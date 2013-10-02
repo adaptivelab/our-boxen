@@ -12,4 +12,9 @@ class benjackson::sublime-preferences {
     provider => "git"
   }
 
+  repository { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/EditorConfig":
+    source => "sindresorhus/editorconfig-sublime",
+    provider => "git"
+  }
+
 }
