@@ -9,4 +9,14 @@ class benjackson::git-config {
       require => Class["dotfiles"];
   }
 
+  exec { "set my gitignore global":
+    command     => "git config --global core.excludesfile /Users/$::boxen_user/.gitignore",
+    path        => "/usr/bin",
+    user        => $::boxen_user,
+    require     => [
+      Repository["${::boxen_srcdir}/dotfiles"],
+      Class["git"]
+    ]
+  }
+
 }
