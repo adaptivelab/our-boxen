@@ -11,5 +11,11 @@ class people::eadmundo {
   include chrome
   include firefox
   include adium
+  
+  package {
+    [
+      'openconnect'
+     ]:
+   }
 
 }
