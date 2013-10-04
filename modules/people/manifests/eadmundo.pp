@@ -8,5 +8,8 @@ class people::eadmundo {
   include alfred
   include spectacle
   include caffeine
+  include chrome
+  include firefox
+  include adium
 
 }
