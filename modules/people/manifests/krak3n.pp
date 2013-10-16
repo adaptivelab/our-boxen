@@ -1,7 +1,6 @@
 class people::krak3n {
 
   # Software
-  include java
   include ruby
   include ruby::1_9_3_p448
 
@@ -190,6 +189,11 @@ class people::krak3n {
   ruby::gem { "tmuxinator":
     gem     => 'tmuxinator',
     ruby    => '1.9.3'
+  }
+
+  # VPN
+  package { ["openconnect", "tuntap"]:
+    ensure => installed,
   }
 
 }
