@@ -7,6 +7,6 @@ class steeeve::git-config {
       value => 'steve@adaptivelab.co.uk';
     # Would like to use this, but boxen overwrites this setting
     #'core.excludesfile':
-      #value => '/Users/${::luser}/.gitignore_global';
+      #value => '/Users/${::boxen_user}/.gitignore_global';
   }
 }

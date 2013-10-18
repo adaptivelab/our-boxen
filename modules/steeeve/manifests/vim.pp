@@ -39,20 +39,20 @@ class steeeve::vim {
     source => 'https://github.com/tomasr/molokai.git',
   }
 
-  file { "/Users/${::luser}/.vim/colors":
+  file { "/Users/${::boxen_user}/.vim/colors":
     mode   => '0644',
     ensure => "directory",
   }
 
-  file { "/Users/${::luser}/.vim/colors/molokai.vim":
+  file { "/Users/${::boxen_user}/.vim/colors/molokai.vim":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/molokai/colors/molokai.vim",
-    require => [ Repository["${::boxen_srcdir}/molokai"], File["/Users/${::luser}/.vim/colors"]],
+    require => [ Repository["${::boxen_srcdir}/molokai"], File["/Users/${::boxen_user}/.vim/colors"]],
   }
 
   # VIM
-  file { "/Users/${::luser}/.vimrc":
+  file { "/Users/${::boxen_user}/.vimrc":
     target => "${::boxen_srcdir}/dotfiles/.vimrc",
     require => Class["dotfiles"];
   }
