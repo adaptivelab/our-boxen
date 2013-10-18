@@ -23,7 +23,7 @@ class people::krak3n {
       version => '1.9.3'
   }
 
-  $salt = "/Users/${::luser}/.salt"
+  $salt = "/Users/${::boxen_user}/.salt"
 
   # My salt repo - where my dot files and other things live
   repository { $salt:
@@ -35,7 +35,7 @@ class people::krak3n {
   exec { "update_salt_repo":
     command => "git pull origin master",
     cwd => $salt,
-    user => "${::luser}",
+    user => "${::boxen_user}",
     require => Repository[$salt],
   }
 
@@ -43,7 +43,7 @@ class people::krak3n {
   exec { "update_salt_submodules":
     command => "git submodule update --init --recursive",
     cwd => $salt,
-    user => "${::luser}",
+    user => "${::boxen_user}",
     require => Repository[$salt],
   }
 
@@ -51,7 +51,7 @@ class people::krak3n {
   exec { "pull_salt_submodules":
     command => "git submodule foreach --recursive git pull origin master",
     cwd => $salt,
-    user => "${::luser}",
+    user => "${::boxen_user}",
     require => Exec["update_salt_submodules"],
   }
 
@@ -59,7 +59,7 @@ class people::krak3n {
   # SSH
   #
 
-  $keys = "/Users/${::luser}/.keys"
+  $keys = "/Users/${::boxen_user}/.keys"
 
   repository { $keys:
     source => 'https://github.com/krak3n/keys.git',
@@ -77,13 +77,13 @@ class people::krak3n {
     require => Repository[$keys],
   }
 
-  file { "/Users/${::luser}/.ssh/id_rsa":
+  file { "/Users/${::boxen_user}/.ssh/id_rsa":
     ensure => link,
     target => "$keys/id_rsa",
     require => Repository[$keys],
   }
 
-  file { "/Users/${::luser}/.ssh/id_rsa.pub":
+  file { "/Users/${::boxen_user}/.ssh/id_rsa.pub":
     ensure => link,
     target => "$keys/id_rsa.pub",
     require => Repository[$keys],
@@ -93,7 +93,7 @@ class people::krak3n {
   # Vim
   #
 
-  file { "/Users/${::luser}/.vimrc":
+  file { "/Users/${::boxen_user}/.vimrc":
     ensure => link,
     mode => '0644',
     target => "$salt/states/local_vim/files/.vimrc",
@@ -109,15 +109,15 @@ class people::krak3n {
     provider => 'pip',
   }
 
-  file { "/Users/${::luser}/.autoenv":
+  file { "/Users/${::boxen_user}/.autoenv":
     ensure => directory,
     mode => 0644,
   }
 
-  file { "/Users/${::luser}/.autoenv/activate.sh":
+  file { "/Users/${::boxen_user}/.autoenv/activate.sh":
     ensure => link,
     target => '/opt/boxen/homebrew/Cellar/python/2.7.3-boxen2/share/python/activate.sh',
-    require => File["/Users/${::luser}/.autoenv"]
+    require => File["/Users/${::boxen_user}/.autoenv"]
   }
 
   #
@@ -125,7 +125,7 @@ class people::krak3n {
   #
 
   # Link .zshrc
-  file { "/Users/${::luser}/.zshrc":
+  file { "/Users/${::boxen_user}/.zshrc":
     ensure => link,
     mode => '0644',
     target => "$salt/states/local_zsh/files/.zshrc",
@@ -133,23 +133,23 @@ class people::krak3n {
   }
 
   # Install Oh My Zsh
-  repository { "/Users/${::luser}/.oh-my-zsh":
+  repository { "/Users/${::boxen_user}/.oh-my-zsh":
     source => "git://github.com/robbyrussell/oh-my-zsh.git",
   }
 
   # My Theme
-  file { "/Users/${::luser}/.oh-my-zsh/themes/chris.zsh-theme":
+  file { "/Users/${::boxen_user}/.oh-my-zsh/themes/chris.zsh-theme":
     ensure => link,
     mode => '0644',
     target => "$salt/states/local_zsh/files/chris.zsh-theme",
-    require => [Repository[$salt], Repository["/Users/${::luser}/.oh-my-zsh"]],
+    require => [Repository[$salt], Repository["/Users/${::boxen_user}/.oh-my-zsh"]],
   }
 
   #
   # Git
   #
 
-  file { "/Users/${::luser}/.gitconfig":
+  file { "/Users/${::boxen_user}/.gitconfig":
     ensure => link,
     mode => '0644',
     target => "$salt/states/local_git/files/.gitconfig",
@@ -165,7 +165,7 @@ class people::krak3n {
   # Tmux
   #
 
-  file { "/Users/${::luser}/.tmux.conf":
+  file { "/Users/${::boxen_user}/.tmux.conf":
     ensure => link,
     mode => '0644',
     target => "$salt/states/local_tmux/files/.tmux.conf",
