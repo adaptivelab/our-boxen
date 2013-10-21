@@ -2,7 +2,7 @@ class people::krak3n {
 
   # Software
   include ruby
-  include ruby::1_9_3_p448
+  include ruby::1_9_3
 
   # Development
   include vim
@@ -20,7 +20,7 @@ class people::krak3n {
 
   # Install ruby 1.9.3
   class { 'ruby::global':
-      version => '1.9.3'
+    version => '1.9.3'
   }
 
   $salt = "/Users/${::boxen_user}/.salt"
