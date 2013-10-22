@@ -24,7 +24,6 @@ class steeeve::vim {
   vim::bundle { 'tpope/vim-haml': }
   vim::bundle { 'nono/vim-handlebars': }
   vim::bundle { 'tpope/vim-cucumber': }
-  vim::bundle { 'taq/vim-rspec': }
   vim::bundle { 'pangloss/vim-javascript': }
   vim::bundle { 'kchmck/vim-coffee-script': }
   vim::bundle { 'digitaltoad/vim-jade': }
