@@ -11,7 +11,8 @@ class steeeve::packages {
       'clojure',
       'cmus',
       'imagesnap',
-      'imagemagick'
+      'imagemagick',
+      'trash'
     ]:
   }
 
