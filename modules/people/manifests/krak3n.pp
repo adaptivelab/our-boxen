@@ -145,6 +145,25 @@ class people::krak3n {
     require => [Repository[$salt], Repository["/Users/${::boxen_user}/.oh-my-zsh"]],
   }
 
+  file { "/Users/${::boxen_user}/.zshrc.after.d":
+    ensure => directory,
+    mode => 755
+  }
+
+  file { "/Users/${::boxen_user}/.zshrc.before.d":
+    ensure => directory,
+    mode => 755
+  }
+
+  file { "/Users/${::boxen_user}/.zshrc.after.d/aliases.zsh":
+    ensure => link,
+    mode => '0644',
+    target => "$salt/states/local_zsh/files/aliases.zsh",
+    require => [Repository[$salt],
+                Repository["/Users/${::boxen_user}/.oh-my-zsh"],
+                File["/Users/${::boxen_user}/.zshrc.after.d"]],
+  }
+
   #
   # Git
   #
