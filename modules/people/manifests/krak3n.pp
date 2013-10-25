@@ -191,6 +191,19 @@ class people::krak3n {
     require => Repository[$salt],
   }
 
+  file { "/Users/${::boxen_user}/.tmux":
+    ensure => directory,
+    mode => 755,
+    require => Repository[$salt],
+  }
+
+  file { "/Users/${::boxen_user}/.tmux/tmux-zoom.sh":
+    ensure => link,
+    mode => '0644',
+    target => "$salt/states/local_tmux/files/tmux-zoom.sh",
+    require => [Repository[$salt], File["/Users/${::boxen_user}/.tmux"]]
+  }
+
   #
   # Gems
   #
