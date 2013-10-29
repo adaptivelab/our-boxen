@@ -13,7 +13,6 @@ class people::steeeve {
   include heroku
   include harvest
   include arduino
-  include shiftit
   include slate
   include mou
   include chrome::canary
