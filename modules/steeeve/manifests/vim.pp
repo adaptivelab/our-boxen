@@ -5,7 +5,6 @@ class steeeve::vim {
   # Bundles here:
   vim::bundle { 'kien/ctrlp.vim': }
   vim::bundle { 'scrooloose/syntastic': }
-  vim::bundle { 'ervandew/supertab': }
   vim::bundle { 'tpope/vim-surround': }
   vim::bundle { 'scrooloose/nerdcommenter': }
   vim::bundle { 'scrooloose/nerdtree': }
