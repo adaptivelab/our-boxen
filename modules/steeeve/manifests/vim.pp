@@ -16,7 +16,7 @@ class steeeve::vim {
   vim::bundle { 'bling/vim-airline': }
   vim::bundle { 'FredKSchott/CoVim': }
   vim::bundle { 'editorconfig/editorconfig-vim': }
-  vim::bundle { 'Valloric/YouCompleteMe': }
+  #vim::bundle { 'Valloric/YouCompleteMe': }
 
   # Language bits
   vim::bundle { 'vim-ruby/vim-ruby': }
