@@ -14,4 +14,7 @@ class adaptive_lab::environment {
   include btsync
   include git-flow
 
+  # So we can broadcast our individual musical tastes to the office.
+  include sonos
+
 }
