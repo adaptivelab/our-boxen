@@ -234,6 +234,11 @@ GITHUBTARBALL
     slate (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sonos
+  specs:
+    sonos (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-sourcetree
   specs:
     sourcetree (0.0.4)
@@ -368,6 +373,7 @@ DEPENDENCIES
   shiftit (= 0.0.2)
   skype (= 1.0.2)
   slate (= 1.0.0)
+  sonos (= 1.0.2)
   sourcetree (= 0.0.4)
   spectacle (= 1.0.0)
   spotify (= 1.0.1)

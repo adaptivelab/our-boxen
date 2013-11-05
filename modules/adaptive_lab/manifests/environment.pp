@@ -17,4 +17,7 @@ class adaptive_lab::environment {
 
   include adaptive_lab::nodejs_packages
 
+  # So we can broadcast our individual musical tastes to the office.
+  include sonos
+
 }
