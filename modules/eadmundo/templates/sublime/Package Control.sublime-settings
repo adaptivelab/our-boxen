@@ -1,0 +1,14 @@
+{
+    "installed_packages":
+    [
+        "All Autocomplete",
+        "GitGutter",
+        "Jinja2",
+        "Package Control",
+        "Pretty JSON",
+        "Pylinter",
+        "SublimeCodeIntel",
+        "SublimeLinter",
+        "TrailingSpaces"
+    ]
+}
