@@ -14,7 +14,7 @@ class people::steeeve {
   include harvest
   include arduino
   include slate
-  include mou
+  include flux
   include chrome::canary
   include steeeve::packages
   include steeeve::dotfiles
