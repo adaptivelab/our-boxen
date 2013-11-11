@@ -1,38 +1,21 @@
 class eadmundo::sublime-preferences {
 
-  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings":
-    content => template("eadmundo/sublime/Preferences.sublime-settings"),
-    group   => "staff",
-    owner   => $::boxen_user,
-    require => Class["sublime_text_2"]
-  }
+  $homedir = "/Users/${::boxen_user}"
 
-  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings":
-    content => template("eadmundo/sublime/Package Control.sublime-settings"),
-    group   => "staff",
-    owner   => $::boxen_user,
-    require => Class["sublime_text_2"]
-  }
+  $application_support_dir = "${homedir}/Library/Application Support"
 
-  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/Ruby.sublime-settings":
-    content => template("eadmundo/sublime/Ruby.sublime-settings"),
-    group   => "staff",
-    owner   => $::boxen_user,
-    require => Class["sublime_text_2"]
-  }
+  $sublime_application_support_dir = "${application_support_dir}/Sublime Text 2"
 
-  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/trailing_spaces.sublime-settings":
-    content => template("eadmundo/sublime/trailing_spaces.sublime-settings"),
-    group   => "staff",
-    owner   => $::boxen_user,
-    require => Class["sublime_text_2"]
-  }
+  $sublime_packages_dir = "${sublime_application_support_dir}/Packages"
 
-  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap":
-    content => template("eadmundo/sublime/Default (OSX).sublime-keymap"),
-    group   => "staff",
-    owner   => $::boxen_user,
-    require => Class["sublime_text_2"]
+  $sublime_user_prefs_dir = "${sublime_packages_dir}/User"
+
+  $sublime_dirs = [$sublime_application_support_dir, $sublime_packages_dir, $sublime_user_prefs_dir]
+
+  file { $sublime_dirs :
+    ensure => directory,
+    source  => "puppet:///modules/people/${::github_login}/sublime.d/Packages/User",
+    recurse => true,
   }
 
 }
