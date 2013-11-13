@@ -7,6 +7,9 @@ class eadmundo::git-config {
     "user.email":
       value => "edward@adaptivelab.com",
       require => Class["dotfiles"];
+    "push.default":
+      value => "simple",
+      require => Class["dotfiles"];
   }
 
 }
