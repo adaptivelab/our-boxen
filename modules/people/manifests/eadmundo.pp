@@ -25,4 +25,11 @@ class people::eadmundo {
     provider => 'pip',
   }
 
+  # make sure we have a Projects directory
+  file { "/Users/${::boxen_user}/Projects":
+    ensure => "directory",
+  }
+
+  include projects::soma
+
 }
