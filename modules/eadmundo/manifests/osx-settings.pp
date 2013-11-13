@@ -1,12 +1,12 @@
 class eadmundo::osx-settings {
 
   file { "${::boxen_srcdir}/root-osx-settings.sh":
-    content => template("eadmundo/root-osx-settings.sh.erb"),
+    content => template("eadmundo/root-osx-settings.sh"),
     group   => "staff"
   }
 
   file { "${::boxen_srcdir}/user-osx-settings.sh":
-    content => template("eadmundo/user-osx-settings.sh.erb"),
+    content => template("eadmundo/user-osx-settings.sh"),
     group   => "staff",
     owner   => $::boxen_user
   }

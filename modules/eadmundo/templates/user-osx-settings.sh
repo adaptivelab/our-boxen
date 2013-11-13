@@ -92,11 +92,8 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
 
-# Show icons for hard drives, servers, and removable media on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+# don't show anything on the desktop
+defaults write com.apple.finder CreateDesktop -bool false
 
 # Finder: show hidden files by default
 defaults write com.apple.finder AppleShowAllFiles -bool true
@@ -154,7 +151,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Wipe all (default) app icons from the Dock
 # This is only really useful when setting up a new Mac, or if you don’t use
 # the Dock to launch apps.
-#defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-apps -array
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
