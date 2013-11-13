@@ -279,6 +279,11 @@ GITHUBTARBALL
     sysctl (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-textmate
+  specs:
+    textmate (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-tmux
   specs:
     tmux (1.0.2)
@@ -388,6 +393,7 @@ DEPENDENCIES
   sudo (= 1.0.0)
   swig (= 1.0.0)
   sysctl (= 1.0.0)
+  textmate (= 1.1.0)
   tmux (= 1.0.2)
   vagrant (= 2.0.9)
   vim (= 1.0.5)
