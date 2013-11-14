@@ -21,3 +21,5 @@ PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[
 #eval "$(hub alias -s)"
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+source /opt/boxen/homebrew/share/python/virtualenvwrapper.sh
