@@ -1,5 +1,8 @@
 class people::steeeve {
-
+  include kindle
+  include spotify
+  include alfred
+  include caffeine
   include zsh
   include iterm2::dev
   include redis
@@ -8,14 +11,10 @@ class people::steeeve {
   include postgresql
   include sourcetree
   include heroku
-  include phantomjs::1_9_0
   include harvest
   include arduino
-  include shiftit
   include slate
-  include mou
-  include kindle
-  include spotify
+  include flux
   include chrome::canary
   include steeeve::packages
   include steeeve::dotfiles

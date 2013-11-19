@@ -3,7 +3,7 @@ class steeeve::fonts {
     source => 'https://github.com/Lokaltog/powerline-fonts',
   }
 
-  file { "/users/${::luser}/Library/Fonts/Droid Sans Mono for Powerline.otf":
+  file { "/users/${::boxen_user}/Library/Fonts/Droid Sans Mono for Powerline.otf":
     mode      => '0644',
     source    => "${::boxen_srcdir}/fonts/DroidSansMono/Droid Sans Mono for Powerline.otf",
     # links     => "manage",
@@ -15,6 +15,6 @@ class steeeve::fonts {
     command     => "fc-cache -vf ~/.fonts",
     path        => "/opt/X11/bin/",
     cwd         => "${::boxen_srcdir}/dotfiles",
-    require     => File["/users/${::luser}/Library/Fonts/Droid Sans Mono for Powerline.otf"],
+    require     => File["/users/${::boxen_user}/Library/Fonts/Droid Sans Mono for Powerline.otf"],
   }
 }

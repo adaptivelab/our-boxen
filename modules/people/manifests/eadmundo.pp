@@ -11,21 +11,25 @@ class people::eadmundo {
   include chrome
   include firefox
   include adium
-  
-  package {
-    [
-      'openconnect'
-     ]:
-   }
-   
-  include osx::finder::unhide_library
-  include osx::dock::clear_dock
-  include osx::dock::hide_indicator_lights
-  include osx::global::enable_keyboard_control_access
-  include osx::global::expand_print_dialog
-  include osx::global::expand_save_dialog
-  include osx::global::disable_key_press_and_hold
-  include osx::disable_app_quarantine
-  include osx::no_network_dsstores
+  include textmate
+  include postgresql
+  include redis
+
+  include eadmundo::osx-settings
+  include eadmundo::git-config
+  include eadmundo::dotfiles
+  include eadmundo::sublime-preferences
+
+   package { ["ipython", "virtualenvwrapper", "autoenv", "pylint"]:
+    ensure => 'installed',
+    provider => 'pip',
+  }
+
+  # make sure we have a Projects directory
+  file { "/Users/${::boxen_user}/Projects":
+    ensure => "directory",
+  }
+
+  include projects::soma
 
 }

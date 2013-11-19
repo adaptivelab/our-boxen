@@ -5,7 +5,6 @@ class steeeve::vim {
   # Bundles here:
   vim::bundle { 'kien/ctrlp.vim': }
   vim::bundle { 'scrooloose/syntastic': }
-  vim::bundle { 'ervandew/supertab': }
   vim::bundle { 'tpope/vim-surround': }
   vim::bundle { 'scrooloose/nerdcommenter': }
   vim::bundle { 'scrooloose/nerdtree': }
@@ -16,6 +15,7 @@ class steeeve::vim {
   vim::bundle { 'bling/vim-airline': }
   vim::bundle { 'FredKSchott/CoVim': }
   vim::bundle { 'editorconfig/editorconfig-vim': }
+  #vim::bundle { 'Valloric/YouCompleteMe': }
 
   # Language bits
   vim::bundle { 'vim-ruby/vim-ruby': }
@@ -23,7 +23,6 @@ class steeeve::vim {
   vim::bundle { 'tpope/vim-haml': }
   vim::bundle { 'nono/vim-handlebars': }
   vim::bundle { 'tpope/vim-cucumber': }
-  vim::bundle { 'taq/vim-rspec': }
   vim::bundle { 'pangloss/vim-javascript': }
   vim::bundle { 'kchmck/vim-coffee-script': }
   vim::bundle { 'digitaltoad/vim-jade': }
@@ -39,20 +38,20 @@ class steeeve::vim {
     source => 'https://github.com/tomasr/molokai.git',
   }
 
-  file { "/Users/${::luser}/.vim/colors":
+  file { "/Users/${::boxen_user}/.vim/colors":
     mode   => '0644',
     ensure => "directory",
   }
 
-  file { "/Users/${::luser}/.vim/colors/molokai.vim":
+  file { "/Users/${::boxen_user}/.vim/colors/molokai.vim":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/molokai/colors/molokai.vim",
-    require => [ Repository["${::boxen_srcdir}/molokai"], File["/Users/${::luser}/.vim/colors"]],
+    require => [ Repository["${::boxen_srcdir}/molokai"], File["/Users/${::boxen_user}/.vim/colors"]],
   }
 
   # VIM
-  file { "/Users/${::luser}/.vimrc":
+  file { "/Users/${::boxen_user}/.vimrc":
     target => "${::boxen_srcdir}/dotfiles/.vimrc",
     require => Class["dotfiles"];
   }

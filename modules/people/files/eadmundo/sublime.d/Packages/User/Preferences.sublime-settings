@@ -1,0 +1,12 @@
+{
+	"create_window_at_startup": false,
+	"font_face": "Inconsolata",
+	"font_size": 14,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"remember_open_files": false,
+	"translate_tabs_to_spaces": true
+}

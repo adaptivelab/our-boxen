@@ -1,0 +1,9 @@
+{
+    "extensions":
+    [
+        "pp",
+        "Puppetfile",
+        "Vagrantfile"
+    ],
+        "tab_size": 2
+}
