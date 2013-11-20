@@ -4,7 +4,7 @@ class steeeve::oh-my-zsh {
     source => 'https://github.com/robbyrussell/oh-my-zsh.git',
   }
 
-  file { "/Users/${::luser}/.oh-my-zsh":
+  file { "/Users/${::boxen_user}/.oh-my-zsh":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/.oh-my-zsh",

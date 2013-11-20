@@ -12,32 +12,32 @@ class steeeve::dotfiles {
     require     => Repository["${::boxen_srcdir}/dotfiles"],
   }
 
-  file { "/users/${::luser}/.zshrc":
+  file { "/users/${::boxen_user}/.zshrc":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/.zshrc",
     require => Repository["${::boxen_srcdir}/dotfiles"],
   }
 
-  file { "/Users/${::luser}/.gitignore_global":
+  file { "/Users/${::boxen_user}/.gitignore_global":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/.gitignore_global",
     require => Repository["${::boxen_srcdir}/dotfiles"],
   }
 
-  file { "/Users/${::luser}/Library/Application Support/Sublime Text 2/Packages/User/":
+  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/":
     ensure => "directory",
   }
 
-  file { "/Users/${::luser}/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings":
+  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/Preferences.sublime-settings",
-    require => [ Repository["${::boxen_srcdir}/dotfiles"], File["/Users/${::luser}/Library/Application Support/Sublime Text 2/Packages/User/"] ],
+    require => [ Repository["${::boxen_srcdir}/dotfiles"], File["/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/"] ],
   }
 
-  file { "/Users/${::luser}/Library/Preferences/com.googlecode.iterm2.plist":
+  file { "/Users/${::boxen_user}/Library/Preferences/com.googlecode.iterm2.plist":
     ensure => link,
     mode   => '0644',
     target => "${::boxen_srcdir}/dotfiles/com.googlecode.iterm2.plist",
