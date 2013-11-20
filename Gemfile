@@ -8,4 +8,3 @@ group :development do
   gem "net-ssh"
   gem "rbvmomi"
 end
-

@@ -6,6 +6,12 @@ class people::ioped {
   include sourcetree
   include sublime_text_2
   include vim
+  include postgresql
+  include tmux
+  include foreman
+  include redis
+  include mongodb
+
   # sublime_text_2::package { 'Emmet':
   #   source => 'sergeche/emmet-sublime'
   # }
@@ -19,13 +25,10 @@ class people::ioped {
   vim::bundle { 'scrooloose/nerdtree': }
   vim::bundle { 'jeetsukumaran/vim-buffergator': }
   vim::bundle { 'tpope/vim-fugitive': }
-  vim::bundle { 'FredKSchott/CoVim': }
-  # vim::bundle { 'kana/vim-fakeclip': }
   # Language bits
   vim::bundle { 'tpope/vim-rails': }
   vim::bundle { 'tpope/vim-haml': }
   vim::bundle { 'tpope/vim-cucumber': }
-  vim::bundle { 'taq/vim-rspec': }
   vim::bundle { 'pangloss/vim-javascript': }
   vim::bundle { 'digitaltoad/vim-jade': }
   vim::bundle { 'hail2u/vim-css3-syntax': }
