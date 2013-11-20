@@ -15,6 +15,7 @@ class people::steeeve {
   include arduino
   include slate
   include flux
+  include adium
   include chrome::canary
   include steeeve::packages
   include steeeve::dotfiles
