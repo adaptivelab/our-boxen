@@ -11,10 +11,10 @@ class steeeve::vim {
   vim::bundle { 'jeetsukumaran/vim-buffergator': }
   vim::bundle { 'tpope/vim-fugitive': }
   #vim::bundle { 'kana/vim-fakeclip': }
-  #vim::bundle { 'Lokaltog/powerline': }
   vim::bundle { 'bling/vim-airline': }
-  vim::bundle { 'FredKSchott/CoVim': }
   vim::bundle { 'editorconfig/editorconfig-vim': }
+  vim::bundle { 'mattn/gist-vim': }
+  vim::bundle { 'godlygeek/tabular': }
   #vim::bundle { 'Valloric/YouCompleteMe': }
 
   # Language bits
