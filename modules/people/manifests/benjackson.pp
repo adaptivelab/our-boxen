@@ -5,6 +5,7 @@ class people::benjackson {
   include iterm2::dev
   include sublime_text_2
   include font::source-code-pro
+  include phantomjs::1_9_0
 
   include benjackson::osx-settings
   include benjackson::git-config
