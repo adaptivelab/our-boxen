@@ -1,4 +1,4 @@
-class people::ioped {
+class people::pppedro {
 
   # Development
   include zsh
@@ -11,6 +11,7 @@ class people::ioped {
   include foreman
   include redis
   include mongodb
+  include phantomjs
 
   # sublime_text_2::package { 'Emmet':
   #   source => 'sergeche/emmet-sublime'
