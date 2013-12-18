@@ -53,7 +53,7 @@ github "sonos",             "1.0.3"
 
 # People
 github "firefox",           "1.0.5"
-github "phantomjs",         "2.0.2"
+github "phantomjs",         "2.1.0"
 github "rdio",              "1.0.0"
 github "chrome",            "1.1.1"
 github "vim",               "1.0.5"
