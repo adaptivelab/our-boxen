@@ -12,7 +12,6 @@ class adaptive_lab::environment {
   include chrome
   include firefox
   include heroku
-  include btsync
   include git-flow
 
   include adaptive_lab::nodejs_packages

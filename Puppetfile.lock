@@ -1,9 +1,4 @@
 GITHUBTARBALL
-  remote: adaptivelab/puppet-btsync
-  specs:
-    btsync (1.0.0)
-
-GITHUBTARBALL
   remote: adaptivelab/puppet-font
   specs:
     font (1.0.3)
@@ -340,7 +335,6 @@ DEPENDENCIES
   autoconf (= 1.0.0)
   bash (= 1.1.0)
   boxen (= 3.0.2)
-  btsync (= 1.0.0)
   caffeine (= 1.0.0)
   chrome (= 1.1.1)
   dnsmasq (= 1.0.0)
