@@ -11,7 +11,7 @@ class benjackson::git-config {
 
   exec { "set my gitignore global":
     command     => "git config --global core.excludesfile /Users/$::boxen_user/.gitignore",
-    path        => "/usr/bin",
+    path        => "/opt/boxen/homebrew/bin",
     user        => $::boxen_user,
     require     => [
       Repository["${::boxen_srcdir}/dotfiles"],
