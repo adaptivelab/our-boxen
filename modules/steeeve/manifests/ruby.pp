@@ -1,4 +1,4 @@
-class ruby {
+class steeeve::ruby {
   $version = "2.0.0"
 
   class { 'ruby::global':

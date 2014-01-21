@@ -5,8 +5,8 @@ class steeeve::git-config {
       value => 'Steve Mckellar';
     'user.email':
       value => 'steve@adaptivelab.co.uk';
-    'core.excludesfile':
-      value => '/Users/${::boxen_user}/.gitignore_global';
+    #'core.excludesfile':
+      #value => '/Users/${::boxen_user}/.gitignore_global';
     #'core.editor':
       #value => '/opt/boxen/homebrew/bin/vim';
     #'hub.protocol':
@@ -59,4 +59,5 @@ class steeeve::git-config {
       #value => 'config --get-regexp alias'
     #'branch.autosetuprebase':
       #value => always
+  }
 }
