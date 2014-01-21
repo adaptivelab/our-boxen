@@ -10,7 +10,7 @@ class benjackson::dotfiles {
 
   exec { "update dotfiles":
     command     => "git pull",
-    path        => "/usr/bin",
+    path        => ["/opt/boxen/homebrew/bin", "/usr/bin"],
     cwd         => "${::boxen_srcdir}/dotfiles",
     user        => $::boxen_user,
     require     => Repository["${::boxen_srcdir}/dotfiles"],
@@ -19,7 +19,6 @@ class benjackson::dotfiles {
 
   exec { "${boxen::config::homebrewdir}/bin/bash ${::boxen_srcdir}/dotfiles/bootstrap.sh --force":
     user        => $::boxen_user,
-    #path        => ["/bin", "/usr/bin", "/usr/local/bin"],
     require     => [Package["bash"], Exec["update dotfiles"]],
     before      => Git::Config::Global["core.excludesfile"]
   }
