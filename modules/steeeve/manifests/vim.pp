@@ -16,6 +16,7 @@ class steeeve::vim {
   vim::bundle { 'mattn/gist-vim': }
   vim::bundle { 'godlygeek/tabular': }
   #vim::bundle { 'Valloric/YouCompleteMe': }
+  vim::bundle { 'vim-scripts/CSSMinister': }
 
   # Language bits
   vim::bundle { 'vim-ruby/vim-ruby': }

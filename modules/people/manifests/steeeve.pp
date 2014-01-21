@@ -18,6 +18,7 @@ class people::steeeve {
   include adium
   include chrome::canary
   include steeeve::packages
+  include steeeve::ruby
   include steeeve::dotfiles
   include steeeve::fonts
   include steeeve::oh-my-zsh

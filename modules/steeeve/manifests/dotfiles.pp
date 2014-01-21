@@ -19,6 +19,13 @@ class steeeve::dotfiles {
     require => Repository["${::boxen_srcdir}/dotfiles"],
   }
 
+  file { "/Users/${::boxen_user}/.gitconfig":
+    ensure => link,
+    mode   => '0644',
+    target => "${::boxen_srcdir}/dotfiles/.gitconfig",
+    require => Repository["${::boxen_srcdir}/dotfiles"],
+  }
+
   file { "/Users/${::boxen_user}/.gitignore_global":
     ensure => link,
     mode   => '0644',
@@ -26,15 +33,18 @@ class steeeve::dotfiles {
     require => Repository["${::boxen_srcdir}/dotfiles"],
   }
 
-  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/":
-    ensure => "directory",
-  }
-
-  file { "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings":
+  file { "/Users/${::boxen_user}/.tmux.conf":
     ensure => link,
     mode   => '0644',
-    target => "${::boxen_srcdir}/dotfiles/Preferences.sublime-settings",
-    require => [ Repository["${::boxen_srcdir}/dotfiles"], File["/Users/${::boxen_user}/Library/Application Support/Sublime Text 2/Packages/User/"] ],
+    target => "${::boxen_srcdir}/dotfiles/.tmux.conf",
+    require => Repository["${::boxen_srcdir}/dotfiles"],
+  }
+
+  file { "/Users/${::boxen_user}/.slate":
+    ensure => link,
+    mode   => '0644',
+    target => "${::boxen_srcdir}/dotfiles/.slate",
+    require => Repository["${::boxen_srcdir}/dotfiles"],
   }
 
   file { "/Users/${::boxen_user}/Library/Preferences/com.googlecode.iterm2.plist":
