@@ -36,7 +36,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
-    boxen (3.0.2)
+    boxen (3.3.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-caffeine
@@ -191,7 +191,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-postgresql
   specs:
-    postgresql (2.0.1)
+    postgresql (3.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-python
@@ -334,7 +334,7 @@ DEPENDENCIES
   arduino (= 1.0.1)
   autoconf (= 1.0.0)
   bash (= 1.1.0)
-  boxen (= 3.0.2)
+  boxen (= 3.3.4)
   caffeine (= 1.0.0)
   chrome (= 1.1.1)
   dnsmasq (= 1.0.0)
@@ -369,7 +369,7 @@ DEPENDENCIES
   pcre (= 1.0.0)
   phantomjs (= 2.0.2)
   pkgconfig (= 1.0.0)
-  postgresql (= 2.0.1)
+  postgresql (= 3.0.0)
   python (= 1.1.1)
   rdio (= 1.0.0)
   redis (= 1.0.0)

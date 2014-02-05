@@ -13,7 +13,7 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen",      "3.0.2"
+github "boxen",      "3.3.4"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
@@ -62,7 +62,7 @@ github "sublime_text_2",    "1.1.2"
 github "redis",             "1.0.0"
 github "mongodb",           "1.0.0"
 github "sysctl",            "1.0.0"
-github "postgresql",        "2.0.1"
+github "postgresql",        "3.0.0"
 github "harvest",           "1.0.1"
 github "sourcetree",        "0.0.4"
 github "arduino",           "1.0.1", :repo => "steeeve/puppet-arduino"

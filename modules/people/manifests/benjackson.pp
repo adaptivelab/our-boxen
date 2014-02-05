@@ -7,6 +7,9 @@ class people::benjackson {
   include font::source-code-pro
   include phantomjs::1_9_0
   include mongodb
+  include postgresql
+  include stdlib
+  include sysctl
 
   include benjackson::osx-settings
   include benjackson::git-config
