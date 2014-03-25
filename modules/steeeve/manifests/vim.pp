@@ -10,7 +10,6 @@ class steeeve::vim {
   vim::bundle { 'scrooloose/nerdtree': }
   vim::bundle { 'jeetsukumaran/vim-buffergator': }
   vim::bundle { 'tpope/vim-fugitive': }
-  #vim::bundle { 'kana/vim-fakeclip': }
   vim::bundle { 'bling/vim-airline': }
   vim::bundle { 'editorconfig/editorconfig-vim': }
   vim::bundle { 'mattn/gist-vim': }
@@ -28,6 +27,7 @@ class steeeve::vim {
   vim::bundle { 'kchmck/vim-coffee-script': }
   vim::bundle { 'digitaltoad/vim-jade': }
   vim::bundle { 'hail2u/vim-css3-syntax': }
+  vim::bundle { 'ap/vim-css-color': }
   vim::bundle { 'groenewege/vim-less': }
   vim::bundle { 'rodjek/vim-puppet': }
   vim::bundle { 'tclem/vim-arduino': }
