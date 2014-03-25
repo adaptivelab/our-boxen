@@ -18,6 +18,7 @@ class people::steeeve {
   include adium
   include chrome::canary
   include firefox::beta
+  include cyberduck
   include steeeve::packages
   include steeeve::ruby
   include steeeve::dotfiles
