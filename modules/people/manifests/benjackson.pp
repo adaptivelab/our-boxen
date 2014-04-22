@@ -8,6 +8,7 @@ class people::benjackson {
   include phantomjs::1_9_0
   include mongodb
   include postgresql
+  include redis
   include stdlib
   include sysctl
 
