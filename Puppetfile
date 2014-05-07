@@ -33,7 +33,7 @@ github "boxen", "3.4.2"
 
 # Support for default hiera data in modules
 
-github "module-data", "0.0.3", :repo => "ripienaar/puppet-module-data"
+github "module-data", "0.0.1", :repo => "ripienaar/puppet-module-data"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
@@ -43,7 +43,7 @@ github "foreman",     "1.2.0"
 github "gcc",         "2.0.100"
 github "git",         "2.3.0"
 github "go",          "1.1.0"
-github "homebrew",    "1.9.2"
+github "homebrew",    "1.7.0"
 github "hub",         "1.3.0"
 github "inifile",     "1.0.3", :repo => "puppetlabs/puppetlabs-inifile"
 github "nginx",       "1.4.3"
@@ -74,13 +74,11 @@ github "vagrant",           "3.0.0"
 github "dropbox",           "1.1.0"
 github "heroku",            "2.0.0"
 github "skype",             "1.0.2"
-github "hipchat",           "1.0.8", :repo => "adaptivelab/puppet-hipchat"
 github "git-flow",          "0.2.0", :repo => "adaptivelab/puppet-git-flow"
 github "sonos",             "1.0.3"
 
 # People
 github "firefox",           "1.1.8"
-github "phantomjs",         "2.1.0"
 github "rdio",              "1.0.0"
 github "chrome",            "1.1.2"
 github "vim",               "1.0.5"
@@ -104,7 +102,6 @@ github "vlc",               "1.0.5"
 github "alfred",            "1.1.7"
 github "bash",              "1.1.0"
 github "font",              "1.0.3", :repo => "adaptivelab/puppet-font"
-github "foreman",           "1.1.0"
 github "opera",             "0.3.2"
 github "spectacle",         "1.0.0"
 github "onepassword",       "1.1.0"

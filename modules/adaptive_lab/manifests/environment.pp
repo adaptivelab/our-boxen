@@ -8,7 +8,6 @@ class adaptive_lab::environment {
   include vagrant
   include dropbox
   include skype
-  include hipchat
   include chrome
   include firefox
   include heroku
