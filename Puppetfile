@@ -29,11 +29,11 @@ end
 # Includes many of our custom types and providers, as well as global
 # config. Required.
 
-github "boxen", "3.4.2"
+github "boxen", "3.6.1"
 
 # Support for default hiera data in modules
 
-github "module-data", "0.0.1", :repo => "ripienaar/puppet-module-data"
+github "module-data", "0.0.3", :repo => "ripienaar/puppet-module-data"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
@@ -41,9 +41,9 @@ github "module-data", "0.0.1", :repo => "ripienaar/puppet-module-data"
 github "dnsmasq",     "1.0.1"
 github "foreman",     "1.2.0"
 github "gcc",         "2.0.100"
-github "git",         "2.3.0"
+github "git",         "2.3.1"
 github "go",          "1.1.0"
-github "homebrew",    "1.7.0"
+github "homebrew",    "1.9.2"
 github "hub",         "1.3.0"
 github "inifile",     "1.0.3", :repo => "puppetlabs/puppetlabs-inifile"
 github "nginx",       "1.4.3"
@@ -90,7 +90,6 @@ github "mongodb",           "1.0.0"
 github "postgresql",        "3.0.0"
 github "harvest",           "1.0.2"
 github "sourcetree",        "1.0.0"
-github "arduino",           "1.0.1", :repo => "steeeve/puppet-arduino"
 github "swig",              "1.0.0"
 github "slate",             "1.0.0"
 github "kindle",            "1.0.1"
