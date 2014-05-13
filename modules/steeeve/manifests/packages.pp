@@ -1,10 +1,9 @@
 class steeeve::packages {
   package {
     [
+      'vim',
       'the_silver_searcher',
       'tmux',
-      'neo4j',
-      'autoenv',
       'memcached',
       'scala',
       'leiningen',

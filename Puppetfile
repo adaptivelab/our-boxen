@@ -78,7 +78,7 @@ github "git-flow",          "0.2.0", :repo => "adaptivelab/puppet-git-flow"
 github "sonos",             "1.0.3"
 
 # People
-github "firefox",           "1.1.8"
+github "firefox",           "1.2.0"
 github "rdio",              "1.0.0"
 github "chrome",            "1.1.2"
 github "vim",               "1.0.5"
