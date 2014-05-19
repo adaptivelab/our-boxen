@@ -8,7 +8,6 @@ class steeeve::packages {
       'scala',
       'leiningen',
       'cmus',
-      'imagesnap',
       'trash',
       'ffmpeg',
       'gifsicle'
