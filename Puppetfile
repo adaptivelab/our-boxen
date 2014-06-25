@@ -52,7 +52,7 @@ github "openssl",     "1.0.0"
 github "phantomjs",   "2.3.0"
 github "pkgconfig",   "1.0.0"
 github "repository",  "2.3.0"
-github "ruby",        "7.3.0"
+github "ruby",        "8.0.3"
 github "stdlib",      "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.1.1"
@@ -61,6 +61,7 @@ github "xquartz",     "1.1.1"
 # https://github.com/boxen.
 
 # Dependencies
+github "autoconf",          "1.0.0"
 github "pcre",              "1.0.0"
 github "pkgconfig",         "1.0.0"
 github "sysctl",            "1.0.1"

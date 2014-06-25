@@ -19,6 +19,11 @@ GITHUBTARBALL
     alfred (1.1.8)
 
 GITHUBTARBALL
+  remote: boxen/puppet-autoconf
+  specs:
+    autoconf (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-bash
   specs:
     bash (1.1.0)
@@ -201,7 +206,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-ruby
   specs:
-    ruby (7.3.0)
+    ruby (8.0.3)
 
 GITHUBTARBALL
   remote: boxen/puppet-skype
@@ -311,6 +316,7 @@ GITHUBTARBALL
 DEPENDENCIES
   adium (= 1.3.0)
   alfred (= 1.1.8)
+  autoconf (= 1.0.0)
   bash (= 1.1.0)
   boxen (= 3.6.1)
   caffeine (= 1.0.0)
@@ -352,7 +358,7 @@ DEPENDENCIES
   rdio (= 1.0.0)
   redis (= 1.0.0)
   repository (= 2.3.0)
-  ruby (= 7.3.0)
+  ruby (= 8.0.3)
   skype (= 1.0.2)
   slate (= 1.0.0)
   sonos (= 1.0.3)
