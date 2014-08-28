@@ -1,5 +1,7 @@
 class people::kymsze {
 
+  nodejs::version { 'v0.10.29': }
+
 	#Development
   include sublime_text_2
   include zsh
